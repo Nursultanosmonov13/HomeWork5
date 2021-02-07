@@ -1,32 +1,26 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
         Boss boss = new Boss();
         boss.setBoss(700, 50, "Lucy");
-        System.out.println("Здоровье босса:" + boss.getHealthOfBoss() + ", Урон босса:" + boss.getDamageBoss() + ", Тип зашиты босса: " + boss.getProtectionTypeBoss());
+        System.out.println("Здоровье босса:" + boss.getHealthOfBoss() + ", Урон босса:"
+                + boss.getDamageBoss() + ", Тип зашиты босса: " + boss.getProtectionTypeBoss());
         System.out.println("__________________________");
-        createHeroes();
+        for (Hero infoHero: createHeroes()) {
+            System.out.println("Здоровье:" + infoHero.getHealthOfHeroes() + ", Урон:"
+                    + infoHero.getHeroDamage() + ", Супер способность: " + infoHero.getSuperpower());
+        }
     }
 
-    public static void createHeroes() {
-        // 1 герой
-        Hero heroOne = new Hero(250, 20, "Berserk");
-        // 2 герой
-        Hero heroTwo = new Hero(230, 25);
-        // 3 герой
-        Hero heroThree = new Hero(200, 15, "Lucky");
-        int[] healthOfHeroes = {heroOne.getHealthOfHeroes(), heroTwo.getHealthOfHeroes(), heroThree.getHealthOfHeroes()};
-        int[] heroDamage = {heroOne.getHeroDamage(), heroTwo.getHeroDamage(), heroTwo.getHeroDamage()};
-        String[] superpower = {heroOne.getSuperpower(), heroTwo.getSuperpower(), heroThree.getSuperpower()};
-        for (int i = 0; i < healthOfHeroes.length; i++) {
-            System.out.println("Здоровье:" + healthOfHeroes[i] + ", Урон:" + heroDamage[i] + ", Супер сила героев:" + superpower[i]);
-
-
-        }
-
-
-
+   public static Hero[] createHeroes() {
+       Hero hero = new Hero(250,15,"Lucy");
+       Hero hero1 = new Hero(250,20);
+       Hero hero2 = new Hero(300,25,"Thor");
+       Hero [] a = {hero, hero1, hero2};
+        return a;
     }
 }

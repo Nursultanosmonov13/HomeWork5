@@ -11,7 +11,7 @@ public class Hero {
         this.heroDamage = heroDamage;
         this.superpower = superpower;
     }
-
+    public  Hero(){};
     public Hero(int healthOfHeroes, int heroDamage) {
         this.healthOfHeroes = healthOfHeroes;
         this.heroDamage = heroDamage;
@@ -29,10 +29,6 @@ public class Hero {
         this.superpower = superpower;
     }
 
-    public Hero() {
-        this.healthOfHeroes = healthOfHeroes;
-        this.heroDamage = heroDamage;
-    }
 
     public int getHealthOfHeroes() {
         return healthOfHeroes;
@@ -45,5 +41,4 @@ public class Hero {
     public String getSuperpower() {
         return superpower;
     }
-
 }
